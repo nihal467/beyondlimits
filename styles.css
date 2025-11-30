@@ -647,7 +647,22 @@ section {
     color: var(--primary-color);
     font-size: 0.9rem;
     font-weight: 600;
-    margin: 0.3rem 0 0 0;
+    margin: 0.3rem 0 0.5rem 0;
+}
+
+.contact-qualification {
+    color: var(--dark-color);
+    font-size: 0.85rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.contact-experience {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    margin: 0.2rem 0 0 0;
+    font-weight: 500;
+    opacity: 0.85;
 }
 
 .contact-details {
