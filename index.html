@@ -20,11 +20,18 @@
                 <span class="brand-text">Beyond Limits - Online Learning Hub</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#fees">Fees</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#fees" data-i18n="nav.fees">Fees</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
+            <div class="language-switcher">
+                <select id="languageSelect" class="language-dropdown" aria-label="Select Language">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी (Hindi)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                </select>
+            </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -42,13 +49,13 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Online Tuition for Classes 6–12</h1>
-                <p class="hero-subtitle">Experienced teachers • All subjects • Notes provided</p>
+                <h1 class="hero-title" data-i18n="hero.title">Online Tuition for Classes 6–12</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Experienced teachers • All subjects • Notes provided</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.contactBtn">
                         Contact Us
                     </a>
-                    <a href="#fees" class="btn btn-outline">View Pricing</a>
+                    <a href="#fees" class="btn btn-outline" data-i18n="hero.pricingBtn">View Pricing</a>
                 </div>
             </div>
         </div>
@@ -58,9 +65,9 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Why Choose Us</span>
-                <h2 class="section-title">Excellence in Online Education</h2>
-                <p class="section-description">Quality education with experienced teachers and comprehensive study materials</p>
+                <span class="section-tag" data-i18n="about.tag">Why Choose Us</span>
+                <h2 class="section-title" data-i18n="about.title">Excellence in Online Education</h2>
+                <p class="section-description" data-i18n="about.description">Quality education with experienced teachers and comprehensive study materials</p>
             </div>
             <div class="about-content">
                 <div class="about-card">
@@ -68,24 +75,24 @@
                         <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&q=80" alt="All subjects covered" loading="lazy">
                     </div>
                     <div class="icon">📚</div>
-                    <h3>All Subjects</h3>
-                    <p>Comprehensive online tuition for all subjects including languages for classes 6 to 12</p>
+                    <h3 data-i18n="about.card1.title">All Subjects</h3>
+                    <p data-i18n="about.card1.description">Comprehensive online tuition for all subjects including languages for classes 6 to 12</p>
                 </div>
                 <div class="about-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&q=80" alt="Experienced teachers" loading="lazy">
                     </div>
                     <div class="icon">👨‍🏫</div>
-                    <h3>Experienced Teachers</h3>
-                    <p>Learn from qualified and experienced educators dedicated to your success</p>
+                    <h3 data-i18n="about.card2.title">Experienced Teachers</h3>
+                    <p data-i18n="about.card2.description">Learn from qualified and experienced educators dedicated to your success</p>
                 </div>
                 <div class="about-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=80" alt="Study notes provided" loading="lazy">
                     </div>
                     <div class="icon">📝</div>
-                    <h3>Notes Provided</h3>
-                    <p>Get comprehensive study notes and materials to support your learning</p>
+                    <h3 data-i18n="about.card3.title">Notes Provided</h3>
+                    <p data-i18n="about.card3.description">Get comprehensive study notes and materials to support your learning</p>
                 </div>
             </div>
         </div>
@@ -95,38 +102,38 @@
     <section id="fees" class="fees">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Pricing</span>
-                <h2 class="section-title">Affordable Fee Structure</h2>
-                <p class="section-description">Quality education at competitive prices. No hidden charges.</p>
+                <span class="section-tag" data-i18n="fees.tag">Pricing</span>
+                <h2 class="section-title" data-i18n="fees.title">Affordable Fee Structure</h2>
+                <p class="section-description" data-i18n="fees.description">Quality education at competitive prices. No hidden charges.</p>
             </div>
             <div class="fees-cards">
                 <div class="fee-card">
                     <div class="fee-icon">🎒</div>
-                    <h3>Classes 6–10</h3>
+                    <h3 data-i18n="fees.card1.title">Classes 6–10</h3>
                     <div class="price">₹125</div>
-                    <p class="price-subtitle">per hour for group classes</p>
+                    <p class="price-subtitle" data-i18n="fees.card1.subtitle">per hour for group classes</p>
                     <div style="margin: 15px 0; padding: 12px; background: #f0f4ff; border: 2px solid #4F46E5; border-radius: 10px;">
-                        <p style="margin: 0; font-size: 0.95em; font-weight: 600; color: #4F46E5;">Individual tuition: ₹150/hour</p>
+                        <p style="margin: 0; font-size: 0.95em; font-weight: 600; color: #4F46E5;" data-i18n="fees.card1.individual">Individual tuition: ₹150/hour</p>
                     </div>
                     <ul class="features">
-                        <li>✓ Groups of up to 5 students</li>
-                        <li>✓ All subjects covered</li>
-                        <li>✓ Concept-focused teaching</li>
-                        <li>✓ Board exam preparation</li>
-                        <li>✓ Study notes provided</li>
+                        <li data-i18n="fees.features.groups">✓ Groups of up to 5 students</li>
+                        <li data-i18n="fees.features.allSubjects">✓ All subjects covered</li>
+                        <li data-i18n="fees.features.conceptFocused">✓ Concept-focused teaching</li>
+                        <li data-i18n="fees.features.boardExam">✓ Board exam preparation</li>
+                        <li data-i18n="fees.features.notes">✓ Study notes provided</li>
                     </ul>
-                    <a href="#contact" class="btn btn-secondary">
+                    <a href="#contact" class="btn btn-secondary" data-i18n="fees.enrollBtn">
                         Enroll Now
                     </a>
                 </div>
                 <div class="fee-card featured">
-                    <div class="badge">Popular</div>
+                    <div class="badge" data-i18n="fees.popularBadge">Popular</div>
                     <div class="fee-icon">🎓</div>
-                    <h3>Classes 11 & 12</h3>
+                    <h3 data-i18n="fees.card2.title">Classes 11 & 12</h3>
                     <div class="price">₹200</div>
-                    <p class="price-subtitle">per hour for group classes</p>
+                    <p class="price-subtitle" data-i18n="fees.card2.subtitle">per hour for group classes</p>
                     <div style="margin: 15px 0; padding: 12px; background: rgba(255, 255, 255, 0.2); border: 2px solid rgba(255, 255, 255, 0.8); border-radius: 10px;">
-                        <p style="margin: 0; font-size: 0.95em; font-weight: 600; color: white;">Individual tuition: ₹250/hour</p>
+                        <p style="margin: 0; font-size: 0.95em; font-weight: 600; color: white;" data-i18n="fees.card2.individual">Individual tuition: ₹250/hour</p>
                     </div>
                     <ul class="features">
                         <li>✓ Groups of up to 5 students</li>
@@ -141,17 +148,17 @@
                 </div>
                 <div class="fee-card">
                     <div class="fee-icon">🏆</div>
-                    <h3>Competitive Exams</h3>
-                    <div class="price-custom">Custom</div>
-                    <p class="price-subtitle">as per requirement</p>
+                    <h3 data-i18n="fees.card3.title">Competitive Exams</h3>
+                    <div class="price-custom" data-i18n="fees.card3.custom">Custom</div>
+                    <p class="price-subtitle" data-i18n="fees.card3.subtitle">as per requirement</p>
                     <ul class="features">
-                        <li>✓ JEE / NEET coaching</li>
-                        <li>✓ Olympiad preparation</li>
-                        <li>✓ Expert guidance</li>
-                        <li>✓ Practice materials</li>
-                        <li>✓ Personalized training</li>
+                        <li data-i18n="fees.card3.feature1">✓ JEE / NEET coaching</li>
+                        <li data-i18n="fees.card3.feature2">✓ Olympiad preparation</li>
+                        <li data-i18n="fees.card3.feature3">✓ Expert guidance</li>
+                        <li data-i18n="fees.card3.feature4">✓ Practice materials</li>
+                        <li data-i18n="fees.card3.feature5">✓ Personalized training</li>
                     </ul>
-                    <a href="#contact" class="btn btn-secondary">
+                    <a href="#contact" class="btn btn-secondary" data-i18n="fees.discussBtn">
                         Discuss Pricing
                     </a>
                 </div>
@@ -163,24 +170,24 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Get in Touch</span>
-                <h2 class="section-title">Ready to Start Learning?</h2>
-                <p class="section-description">Contact our team for admissions, inquiries, or any questions you may have</p>
+                <span class="section-tag" data-i18n="contact.tag">Get in Touch</span>
+                <h2 class="section-title" data-i18n="contact.title">Ready to Start Learning?</h2>
+                <p class="section-description" data-i18n="contact.description">Contact our team for admissions, inquiries, or any questions you may have</p>
             </div>
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <div class="info-item">
                         <div class="info-icon">⏰</div>
                         <div class="info-content">
-                            <h4>Available Hours</h4>
-                            <p>Mon - Sun: 8:00 AM - 11:00 PM</p>
+                            <h4 data-i18n="contact.info1.title">Available Hours</h4>
+                            <p data-i18n="contact.info1.text">Mon - Sun: 8:00 AM - 11:00 PM</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <div class="info-icon">💬</div>
                         <div class="info-content">
-                            <h4>Prefer WhatsApp</h4>
-                            <p>Quick responses within 2 hours</p>
+                            <h4 data-i18n="contact.info2.title">Prefer WhatsApp</h4>
+                            <p data-i18n="contact.info2.text">Quick responses within 2 hours</p>
                         </div>
                     </div>
                 </div>
@@ -190,9 +197,9 @@
                             <div class="contact-icon">👩‍🏫</div>
                             <div>
                                 <h3>Mrs. Roopa E M</h3>
-                                <p class="contact-role">Co-Founder & Educator</p>
+                                <p class="contact-role" data-i18n="contact.founder1.role">Co-Founder & Educator</p>
                                 <p class="contact-qualification">BSc • MSc • BEd</p>
-                                <p class="contact-experience">15+ Years Teaching Experience</p>
+                                <p class="contact-experience" data-i18n="contact.founder1.experience">15+ Years Teaching Experience</p>
                             </div>
                         </div>
                         <div class="contact-details">
@@ -206,7 +213,7 @@
                                rel="noopener noreferrer"
                                title="Chat on WhatsApp">
                                 <i class="fab fa-whatsapp"></i>
-                                <span class="whatsapp-text">Message on WhatsApp</span>
+                                <span class="whatsapp-text" data-i18n="contact.whatsappBtn">Message on WhatsApp</span>
                             </a>
                         </div>
                     </div>
@@ -218,9 +225,9 @@
                             <div class="contact-icon">👩‍🏫</div>
                             <div>
                                 <h3>Ms. Aswathy S Menon</h3>
-                                <p class="contact-role">Co-Founder & Educator</p>
+                                <p class="contact-role" data-i18n="contact.founder2.role">Co-Founder & Educator</p>
                                 <p class="contact-qualification">BTech • MTech</p>
-                                <p class="contact-experience">4+ Years Teaching Experience</p>
+                                <p class="contact-experience" data-i18n="contact.founder2.experience">4+ Years Teaching Experience</p>
                             </div>
                         </div>
                         <div class="contact-details">
@@ -234,7 +241,7 @@
                                rel="noopener noreferrer"
                                title="Chat on WhatsApp">
                                 <i class="fab fa-whatsapp"></i>
-                                <span class="whatsapp-text">Message on WhatsApp</span>
+                                <span class="whatsapp-text" data-i18n="contact.whatsappBtn">Message on WhatsApp</span>
                             </a>
                         </div>
                     </div>
@@ -246,7 +253,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>For more information, get in touch with us at <a href="mailto:info@beyondlimits.study" class="footer-email-link">info@beyondlimits.study</a></p>
+            <p><span data-i18n="footer.text">For more information, get in touch with us at</span> <a href="mailto:info@beyondlimits.study" class="footer-email-link">info@beyondlimits.study</a></p>
         </div>
     </footer>
 
