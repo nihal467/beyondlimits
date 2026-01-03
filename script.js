@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     await Promise.all([
         loadTranslation('en'),
         loadTranslation('hi'),
-        loadTranslation('ta')
+        loadTranslation('ta'),
+        loadTranslation('ml')
     ]);
     
     // Check if user has a saved preference, otherwise default to English
