@@ -1,0 +1,22 @@
+# Issue labeler configuration
+
+bug:
+  - '(bug|error|issue|problem|crash|fail)'
+  
+enhancement:
+  - '(feature|enhancement|improvement|add|new)'
+  
+documentation:
+  - '(doc|documentation|readme|guide)'
+  
+question:
+  - '(question|help|how to|how do)'
+  
+security:
+  - '(security|vulnerability|cve|xss|injection)'
+  
+performance:
+  - '(performance|slow|speed|optimize|optimization)'
+  
+accessibility:
+  - '(accessibility|a11y|wcag|aria|screen reader)'

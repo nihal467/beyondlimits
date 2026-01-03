@@ -1,0 +1,163 @@
+name: Security Checks
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+
+jobs:
+  secret-scanning:
+    name: Secret Scanning
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: TruffleHog Secret Scan
+      uses: trufflesecurity/trufflehog@main
+      with:
+        extra_args: --only-verified
+
+    - name: Gitleaks Secret Detection
+      uses: gitleaks/gitleaks-action@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dependency-security:
+    name: Dependency Security Audit
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Check for package.json
+      id: check_package
+      run: |
+        if [ -f "package.json" ]; then
+          echo "exists=true" >> $GITHUB_OUTPUT
+        else
+          echo "exists=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Install dependencies
+      if: steps.check_package.outputs.exists == 'true'
+      run: npm ci
+
+    - name: Run npm audit
+      if: steps.check_package.outputs.exists == 'true'
+      run: npm audit --audit-level=moderate
+
+    - name: OWASP Dependency Check
+      if: steps.check_package.outputs.exists == 'true'
+      uses: dependency-check/Dependency-Check_Action@main
+      with:
+        project: 'School Project'
+        path: '.'
+        format: 'HTML'
+
+  codeql-analysis:
+    name: CodeQL Security Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: javascript
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+
+  sast-scan:
+    name: Static Application Security Testing
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run Semgrep
+      uses: returntocorp/semgrep-action@v1
+      with:
+        config: >-
+          p/security-audit
+          p/javascript
+          p/owasp-top-ten
+
+  license-compliance:
+    name: License Compliance Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check for package.json
+      id: check_package
+      run: |
+        if [ -f "package.json" ]; then
+          echo "exists=true" >> $GITHUB_OUTPUT
+        else
+          echo "exists=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Setup Node.js
+      if: steps.check_package.outputs.exists == 'true'
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      if: steps.check_package.outputs.exists == 'true'
+      run: npm ci
+
+    - name: License Check
+      if: steps.check_package.outputs.exists == 'true'
+      run: |
+        npx license-checker --summary
+
+  security-headers:
+    name: Security Headers Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check for security headers configuration
+      run: |
+        echo "Checking for security headers in HTML files..."
+        
+        # Check for Content-Security-Policy meta tags
+        if grep -r "Content-Security-Policy" *.html 2>/dev/null; then
+          echo "✓ CSP found"
+        else
+          echo "⚠ Consider adding Content-Security-Policy meta tag"
+        fi
+        
+        # Check for X-Content-Type-Options
+        if grep -r "X-Content-Type-Options" *.html 2>/dev/null; then
+          echo "✓ X-Content-Type-Options found"
+        else
+          echo "ℹ Consider adding X-Content-Type-Options"
+        fi

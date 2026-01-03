@@ -1,0 +1,33 @@
+# Label configuration for automatic PR labeling based on changed files
+
+'documentation':
+  - changed-files:
+    - any-glob-to-any-file: ['**/*.md', 'docs/**/*']
+
+'HTML':
+  - changed-files:
+    - any-glob-to-any-file: '**/*.html'
+
+'CSS':
+  - changed-files:
+    - any-glob-to-any-file: '**/*.css'
+
+'JavaScript':
+  - changed-files:
+    - any-glob-to-any-file: '**/*.js'
+
+'github-actions':
+  - changed-files:
+    - any-glob-to-any-file: ['.github/workflows/**', '.github/**/*.yml']
+
+'dependencies':
+  - changed-files:
+    - any-glob-to-any-file: ['package.json', 'package-lock.json']
+
+'public':
+  - changed-files:
+    - any-glob-to-any-file: 'Public/**/*'
+
+'configuration':
+  - changed-files:
+    - any-glob-to-any-file: ['*.json', '*.yml', '*.yaml', '.github/**']
