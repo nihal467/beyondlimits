@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "fees": "Fees",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Online Tuition for Classes 6–12",
+    "subtitle": "Experienced teachers • All subjects • Notes provided",
+    "contactBtn": "Contact Us",
+    "pricingBtn": "View Pricing"
+  },
+  "about": {
+    "tag": "Why Choose Us",
+    "title": "Excellence in Online Education",
+    "description": "Quality education with experienced teachers and comprehensive study materials",
+    "card1": {
+      "title": "All Subjects",
+      "description": "Comprehensive online tuition for all subjects including languages for classes 6 to 12"
+    },
+    "card2": {
+      "title": "Experienced Teachers",
+      "description": "Learn from qualified and experienced educators dedicated to your success"
+    },
+    "card3": {
+      "title": "Notes Provided",
+      "description": "Get comprehensive study notes and materials to support your learning"
+    }
+  },
+  "fees": {
+    "tag": "Pricing",
+    "title": "Affordable Fee Structure",
+    "description": "Quality education at competitive prices. No hidden charges.",
+    "popularBadge": "Popular",
+    "card1": {
+      "title": "Classes 6–10",
+      "subtitle": "per hour for group classes",
+      "individual": "Individual tuition: ₹150/hour"
+    },
+    "card2": {
+      "title": "Classes 11 & 12",
+      "subtitle": "per hour for group classes",
+      "individual": "Individual tuition: ₹250/hour"
+    },
+    "card3": {
+      "title": "Competitive Exams",
+      "custom": "Custom",
+      "subtitle": "as per requirement",
+      "feature1": "✓ JEE / NEET coaching",
+      "feature2": "✓ Olympiad preparation",
+      "feature3": "✓ Expert guidance",
+      "feature4": "✓ Practice materials",
+      "feature5": "✓ Personalized training"
+    },
+    "features": {
+      "groups": "✓ Groups of up to 5 students",
+      "allSubjects": "✓ All subjects covered",
+      "conceptFocused": "✓ Concept-focused teaching",
+      "boardExam": "✓ Board exam preparation",
+      "notes": "✓ Study notes provided"
+    },
+    "enrollBtn": "Enroll Now",
+    "discussBtn": "Discuss Pricing"
+  },
+  "contact": {
+    "tag": "Get in Touch",
+    "title": "Ready to Start Learning?",
+    "description": "Contact our team for admissions, inquiries, or any questions you may have",
+    "info1": {
+      "title": "Available Hours",
+      "text": "Mon - Sun: 8:00 AM - 11:00 PM"
+    },
+    "info2": {
+      "title": "Prefer WhatsApp",
+      "text": "Quick responses within 2 hours"
+    },
+    "founder1": {
+      "role": "Co-Founder & Educator",
+      "experience": "15+ Years Teaching Experience"
+    },
+    "founder2": {
+      "role": "Co-Founder & Educator",
+      "experience": "4+ Years Teaching Experience"
+    },
+    "whatsappBtn": "Message on WhatsApp"
+  },
+  "footer": {
+    "text": "For more information, get in touch with us at"
+  }
+}
