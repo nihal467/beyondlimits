@@ -21,6 +21,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -28,6 +29,8 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: #fff;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
@@ -53,6 +56,18 @@ body {
 }
 
 .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.brand-logo {
+    height: 35px;
+    width: 35px;
+    object-fit: contain;
+}
+
+.brand-text {
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--primary-color);
@@ -555,7 +570,7 @@ section {
 
 .contact-wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 35% 65%;
     gap: 3rem;
     align-items: stretch;
 }
@@ -568,19 +583,24 @@ section {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .info-item {
     display: flex;
     gap: 1.5rem;
     align-items: flex-start;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     border-bottom: 1px solid #e2e8f0;
+}
+
+.info-item:first-child {
+    padding-top: 0;
 }
 
 .info-item:last-child {
     border-bottom: none;
+    padding-bottom: 0;
 }
 
 .info-icon {
@@ -598,91 +618,107 @@ section {
 .info-content p {
     color: var(--text-color);
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
-.contact-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.contact-card {
+.founders-card {
     background: white;
     padding: 2.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
-    transition: var(--transition);
     border: 2px solid transparent;
+    transition: var(--transition);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2.5rem;
+    align-items: start;
 }
 
-.contact-card:hover {
+.founders-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     border-color: var(--secondary-color);
 }
 
+.founder-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.founder-divider {
+    width: 2px;
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    align-self: stretch;
+}
+
 .contact-header {
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1rem;
     border-bottom: 2px solid #f1f5f9;
 }
 
 .contact-icon {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     flex-shrink: 0;
 }
 
 .contact-header h3 {
-    font-size: 1.6rem;
+    font-size: 1.35rem;
     color: var(--dark-color);
     margin: 0;
     font-weight: 700;
+    line-height: 1.35;
+    white-space: nowrap;
 }
 
 .contact-role {
     color: var(--primary-color);
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     font-weight: 600;
-    margin: 0.3rem 0 0.5rem 0;
+    margin: 0.4rem 0 0.6rem 0;
 }
 
 .contact-qualification {
     color: var(--dark-color);
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     margin: 0;
     font-weight: 600;
 }
 
 .contact-experience {
     color: var(--text-color);
-    font-size: 0.8rem;
-    margin: 0.2rem 0 0 0;
+    font-size: 0.82rem;
+    margin: 0.3rem 0 0 0;
     font-weight: 500;
     opacity: 0.85;
 }
 
 .contact-details {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .contact-number {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.3rem;
+    gap: 0.6rem;
+    font-size: 1.2rem;
     color: var(--dark-color);
     font-weight: 700;
     text-decoration: none;
-    padding: 1rem;
+    padding: 0.5rem 1.2rem 0.5rem 0.8rem;
     background: #f8fafc;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: var(--transition);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
 }
 
 .contact-number:hover {
@@ -695,11 +731,22 @@ section {
 }
 
 .btn-whatsapp {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
-    font-size: 1.05rem;
+    padding: 0.75rem 0.8rem;
+    font-size: 1.5rem;
+    min-width: auto;
+    border-radius: 10px;
+}
+
+.btn-whatsapp i {
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.whatsapp-text {
+    display: none;
 }
 
 .btn-whatsapp span:first-child {
@@ -716,6 +763,23 @@ section {
 
 .footer p {
     margin: 0;
+}
+
+.footer-copyright {
+    margin-top: 0.8rem !important;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.footer-email-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.footer-email-link:hover {
+    color: white;
 }
 
 /* Mobile Responsive */
@@ -794,14 +858,54 @@ section {
     }
 
     .about-content,
-    .fees-cards,
-    .contact-cards {
+    .fees-cards {
         grid-template-columns: 1fr;
     }
 
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .founders-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .founder-divider {
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .contact-number {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-whatsapp {
+        width: 100%;
+        padding: 0.8rem;
+        gap: 0.5rem;
+    }
+
+    .whatsapp-text {
+        display: inline;
+    }
+
+    .brand-text {
+        font-size: 1rem;
+    }
+
+    .brand-logo {
+        height: 30px;
+        width: 30px;
     }
 
     .fee-card.featured {
