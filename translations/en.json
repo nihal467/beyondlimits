@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
+    "results": "Results",
     "fees": "Fees",
     "contact": "Contact"
   },
@@ -84,6 +85,12 @@
       "experience": "4+ Years Teaching Experience"
     },
     "whatsappBtn": "Message on WhatsApp"
+  },
+  "results": {
+    "tag": "Our Results",
+    "title": "10th CBSE Examination Results 2026",
+    "description": "Hearty Congratulations to our students for their outstanding performance!",
+    "admission": "Admissions Open for 2026-27 Academic Year"
   },
   "footer": {
     "text": "For more information, get in touch with us at"
