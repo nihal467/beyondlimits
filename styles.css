@@ -268,9 +268,6 @@ body {
     padding-top: 3rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-    flex-wrap: wrap;
-    margin-top: 4rem;
-}
 
 .stat {
     text-align: center;
