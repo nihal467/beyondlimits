@@ -41,12 +41,22 @@ body {
 
 /* Navigation */
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    left: 0;
+    right: 0;
+    background: transparent;
+    box-shadow: none;
     z-index: 1000;
     padding: 1rem 0;
+    transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    padding: 0.7rem 0;
 }
 
 .navbar .container {
@@ -70,6 +80,11 @@ body {
 .brand-text {
     font-size: 1.3rem;
     font-weight: 700;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar.scrolled .brand-text {
     color: var(--primary-color);
 }
 
@@ -81,12 +96,20 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-color);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
     transition: var(--transition);
 }
 
 .nav-menu a:hover {
+    color: white;
+}
+
+.navbar.scrolled .nav-menu a {
+    color: var(--text-color);
+}
+
+.navbar.scrolled .nav-menu a:hover {
     color: var(--primary-color);
 }
 
@@ -99,9 +122,9 @@ body {
 
 .language-dropdown {
     padding: 0.5rem 1rem;
-    border: 2px solid var(--primary-color);
-    background: white;
-    color: var(--primary-color);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    color: white;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
@@ -109,10 +132,17 @@ body {
     transition: var(--transition);
     outline: none;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232563eb' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 0.7rem center;
     padding-right: 2rem;
+}
+
+.navbar.scrolled .language-dropdown {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232563eb' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
 }
 
 .language-dropdown:hover {
@@ -143,9 +173,13 @@ body {
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--dark-color);
+    background: white;
     margin: 3px 0;
     transition: var(--transition);
+}
+
+.navbar.scrolled .mobile-menu-toggle span {
+    background: var(--dark-color);
 }
 
 /* Hero Section */
