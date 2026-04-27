@@ -25,12 +25,16 @@
       "description": "Comprehensive online tuition for all subjects including languages for classes 6 to 12"
     },
     "card2": {
-      "title": "Experienced Teachers",
+      "title": "Exp. Teachers",
       "description": "Learn from qualified and experienced educators dedicated to your success"
     },
     "card3": {
       "title": "Notes Provided",
       "description": "Get comprehensive study notes and materials to support your learning"
+    },
+    "card4": {
+      "title": "Board Exam Prep",
+      "description": "Focused preparation for CBSE & state board exams with proven strategies"
     }
   },
   "fees": {
@@ -95,6 +99,12 @@
     "title": "10th CBSE Examination Results 2026",
     "description": "Hearty Congratulations to our students for their outstanding performance!",
     "admission": "Admissions Open for 2026-27 Academic Year"
+  },
+  "popup": {
+    "badge": "🎉 Results Out!",
+    "title": "10th CBSE Results 2026",
+    "subtitle": "Our students have made us proud!",
+    "cta": "Enroll Now"
   },
   "footer": {
     "text": "For more information, get in touch with us at"

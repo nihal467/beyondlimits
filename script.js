@@ -158,4 +158,26 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
     });
+
+    // Results announcement popup
+    const popup = document.getElementById('resultsPopup');
+    const popupClose = document.getElementById('popupClose');
+    const popupCta = document.getElementById('popupCta');
+
+    if (popup) {
+        // Show after a short delay
+        setTimeout(() => {
+            popup.classList.add('active');
+        }, 800);
+
+        const closePopup = () => {
+            popup.classList.remove('active');
+        };
+
+        popupClose.addEventListener('click', closePopup);
+        popupCta.addEventListener('click', closePopup);
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) closePopup();
+        });
+    }
 });

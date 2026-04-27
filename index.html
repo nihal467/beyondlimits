@@ -12,6 +12,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Results Announcement Popup -->
+    <div class="popup-overlay" id="resultsPopup">
+        <div class="popup-content">
+            <button class="popup-close" id="popupClose" aria-label="Close">&times;</button>
+            <div class="popup-badge" data-i18n="popup.badge">🎉 Results Out!</div>
+            <h2 class="popup-title" data-i18n="popup.title">10th CBSE Results 2026</h2>
+            <p class="popup-subtitle" data-i18n="popup.subtitle">Our students have made us proud!</p>
+            <div class="popup-results">
+                <div class="popup-student">
+                    <img src="Public/studentResults/saniya.jpeg" alt="Saniya">
+                    <span class="popup-name">Saniya</span>
+                    <span class="popup-score">91%</span>
+                </div>
+                <div class="popup-student">
+                    <img src="Public/studentResults/vedha.jpeg" alt="Vedha">
+                    <span class="popup-name">Vedha</span>
+                    <span class="popup-score">86.4%</span>
+                </div>
+                <div class="popup-student">
+                    <img src="Public/studentResults/sabareesh.jpeg" alt="Sabareesh">
+                    <span class="popup-name">Sabareesh</span>
+                    <span class="popup-score">85%</span>
+                </div>
+                <div class="popup-student">
+                    <img src="Public/studentResults/harini.jpeg" alt="Harini">
+                    <span class="popup-name">Harini</span>
+                    <span class="popup-score">81%</span>
+                </div>
+            </div>
+            <a href="#contact" class="btn btn-primary popup-cta" id="popupCta" data-i18n="popup.cta">Enroll Now</a>
+        </div>
+    </div>
+
     <!-- Sticky Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -84,28 +117,32 @@
             </div>
             <div class="about-content">
                 <div class="about-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&q=80" alt="All subjects covered" loading="lazy">
+                    <div class="about-icon-wrap">
+                        <span class="about-icon">📚</span>
                     </div>
-                    <div class="icon">📚</div>
                     <h3 data-i18n="about.card1.title">All Subjects</h3>
                     <p data-i18n="about.card1.description">Comprehensive online tuition for all subjects including languages for classes 6 to 12</p>
                 </div>
                 <div class="about-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&q=80" alt="Experienced teachers" loading="lazy">
+                    <div class="about-icon-wrap">
+                        <span class="about-icon">👨‍🏫</span>
                     </div>
-                    <div class="icon">👨‍🏫</div>
-                    <h3 data-i18n="about.card2.title">Experienced Teachers</h3>
+                    <h3 data-i18n="about.card2.title">Exp. Teachers</h3>
                     <p data-i18n="about.card2.description">Learn from qualified and experienced educators dedicated to your success</p>
                 </div>
                 <div class="about-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=80" alt="Study notes provided" loading="lazy">
+                    <div class="about-icon-wrap">
+                        <span class="about-icon">📝</span>
                     </div>
-                    <div class="icon">📝</div>
                     <h3 data-i18n="about.card3.title">Notes Provided</h3>
                     <p data-i18n="about.card3.description">Get comprehensive study notes and materials to support your learning</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon-wrap">
+                        <span class="about-icon">🎯</span>
+                    </div>
+                    <h3 data-i18n="about.card4.title">Board Exam Prep</h3>
+                    <p data-i18n="about.card4.description">Focused preparation for CBSE & state board exams with proven strategies</p>
                 </div>
             </div>
         </div>
@@ -175,8 +212,8 @@
                     <h3 data-i18n="fees.card1.title">Classes 6–10</h3>
                     <div class="price">₹150</div>
                     <p class="price-subtitle" data-i18n="fees.card1.subtitle">per hour for group classes</p>
-                    <div style="margin: 15px 0; padding: 12px; background: #f0f4ff; border: 2px solid #4F46E5; border-radius: 10px;">
-                        <p style="margin: 0; font-size: 0.95em; font-weight: 600; color: #4F46E5;" data-i18n="fees.card1.individual">Individual tuition: ₹250/hour</p>
+                    <div class="individual-price">
+                        <p data-i18n="fees.card1.individual">Individual tuition: ₹250/hour</p>
                     </div>
                     <ul class="features">
                         <li data-i18n="fees.features.groups">✓ Groups of up to 5 students</li>
@@ -195,8 +232,8 @@
                     <h3 data-i18n="fees.card2.title">Classes 11 & 12</h3>
                     <div class="price">₹200</div>
                     <p class="price-subtitle" data-i18n="fees.card2.subtitle">per hour for group classes</p>
-                    <div style="margin: 15px 0; padding: 12px; background: rgba(255, 255, 255, 0.2); border: 2px solid rgba(255, 255, 255, 0.8); border-radius: 10px;">
-                        <p style="margin: 0; font-size: 0.95em; font-weight: 600; color: white;" data-i18n="fees.card2.individual">Individual tuition: ₹300/hour</p>
+                    <div class="individual-price featured-individual">
+                        <p data-i18n="fees.card2.individual">Individual tuition: ₹300/hour</p>
                     </div>
                     <ul class="features">
                         <li data-i18n="fees.features.groups">✓ Groups of up to 5 students</li>
