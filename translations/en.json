@@ -7,10 +7,14 @@
     "contact": "Contact"
   },
   "hero": {
+    "badge": "🎓 Admissions Open 2026-27",
     "title": "Online Tuition for Classes 6–12",
     "subtitle": "Experienced teachers • All subjects • Notes provided",
     "contactBtn": "Contact Us",
-    "pricingBtn": "View Pricing"
+    "pricingBtn": "View Pricing",
+    "stat1": "Years Experience",
+    "stat2": "Students Taught",
+    "stat3": "Top Score 2026"
   },
   "about": {
     "tag": "Why Choose Us",
